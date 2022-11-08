@@ -11,14 +11,34 @@
 <body>
   <h1>RANDOM KITTIES APP</h1>
 
-  <section>
+  <section id="randomKitties">
+    <h2>Random Kitties</h2>
+    <article>
+      <img id="img1" width="350" alt="randomCat2">
+      <button>ADD TO FAVS</button>
+    </article>
 
+    <article>
+      <img id="img2" width="350" alt="randomCat4">
+      <button>ADD TO FAVS</button>
+    </article>
+
+    <article>
+      <img id="img3" width="350" alt="randomCat1">
+      <button>ADD TO FAVS</button>
+    </article>
+    <button onclick="reload()">RELOAD</button>
   </section>
 
-  <img id="img1" width="350" alt="randomCat2">
-  <img id="img2" width="350" alt="randomCat4">
-  <img id="img3" width="350" alt="randomCat1">
-  <button onclick="reload()">RELOAD</button>
+  <section id="favs">
+    <h2>Fav Kitties</h2>
+    <article>
+      <img id="img3" width="350" alt="randomCat1">
+      <button>DELETE</button>
+    </article>
+  </section>
+
+
 
   <script src="./main.js"></script>
 </body>

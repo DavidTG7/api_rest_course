@@ -1,4 +1,6 @@
-const URL = "https://api.thecatapi.com/v1/images/search?limit=3";
+import { api_key } from "../api_key";
+
+const URL = `https://api.thecatapi.com/v1/images/search?limit=3&api_key=${api_key}`;
 
 const reload = async () => {
   try {
