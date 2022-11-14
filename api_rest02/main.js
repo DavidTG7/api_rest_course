@@ -1,12 +1,28 @@
-import { api_key } from "../api_key";
+const piece1 = "live_98p84tGkf0oSEVn2HThcx";
+const piece2 = "jQ8PqfaNaDg9PlTGv9QezuKP4";
+const piece3 = "E5dIvEVWUx95Swfbay";
+const api_key = piece1 + piece2 + piece3;
 
-const URL = `https://api.thecatapi.com/v1/images/search?limit=3&api_key=${api_key}`;
+console.log(api_key);
 
-const reload = async () => {
+const API_URL_RANDOM = `https://api.thecatapi.com/v1/images/search?limit=2`;
+const API_URL_FAVOURITES = `https://api.thecatapi.com/v1/favourites?api_key=${api_key}`;
+
+const loadRandomCats = async () => {
   try {
-    const response = await fetch(URL);
+    const response = await fetch(API_URL_RANDOM);
     const data = await response.json();
     createKitties(data);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+const loadFavouritesCats = async () => {
+  try {
+    const response = await fetch(API_URL_FAVOURITES);
+    const data = await response.json();
+    console.log(data);
   } catch (error) {
     console.log(error.message);
   }
@@ -18,9 +34,7 @@ const createKitties = (data) => {
 
   const img2 = document.getElementById("img2");
   img2.src = data[1].url;
-
-  const img3 = document.getElementById("img3");
-  img3.src = data[2].url;
 };
 
-reload();
+loadRandomCats();
+loadFavouritesCats();
