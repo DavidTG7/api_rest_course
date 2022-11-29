@@ -13,26 +13,34 @@
 
   <section id="randomKitties">
     <h2>Random Kitties</h2>
+    <span></span>
     <article>
       <img id="img1" width="350" alt="randomCat2">
-      <button>ADD TO FAVS</button>
+      <button id="btn1">ADD TO FAVS</button>
     </article>
+
 
     <article>
       <img id="img2" width="350" alt="randomCat4">
-      <button>ADD TO FAVS</button>
+      <button id="btn2">ADD TO FAVS</button>
     </article>
 
     <button onclick="loadRandomCats()">RELOAD</button>
   </section>
 
+  <section id="uploadingKittie">
+    <h2>Upload your Kitty pic!</h2>
+
+    <form id="uploadingForm">
+      <input id="file" type="file" name="file">
+      <button type="button" onclick="handleUpload()">Upload pic</button>
+    </form>
+  </section>
+
   <section id="favs">
     <h2>Fav Kitties</h2>
-    <article>
-      <img id="img3" width="350" alt="randomCat1">
-      <button>DELETE</button>
-    </article>
   </section>
+
 
 
 
